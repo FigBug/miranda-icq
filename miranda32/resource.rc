@@ -1,0 +1,836 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINMENU MENU DISCARDABLE 
+BEGIN
+    POPUP "&Icq"
+    BEGIN
+        POPUP "&Add Contact"
+        BEGIN
+            MENUITEM "By &ICQ#...",                 ID_ICQ_ADDCONTACT_BYICQ
+            MENUITEM "By &Email...",                ID_ICQ_ADDCONTACT_BYEMAIL
+
+            MENUITEM "By &Name...",                 ID_ICQ_ADDCONTACT_BYNAME
+            MENUITEM SEPARATOR
+            MENUITEM "&Import...",                  ID_ICQ_ADDCONTACT_IMPORT
+        END
+        POPUP "&Options"
+        BEGIN
+            MENUITEM "&ICQ# && Password...",        ID_ICQ_OPTIONS_ICQPASSWORD
+
+            MENUITEM SEPARATOR
+            MENUITEM "&General Options...",         ID_ICQ_OPTIONS_GENERALOPTIONS
+
+            MENUITEM "S&ound Options...",           ID_ICQ_OPTIONS_SOUNDOPTIONS
+
+        END
+        POPUP "&Plugin Settings"
+        BEGIN
+            MENUITEM "<no plugins>",                ID_ICQ_PLUGINSETTINGS_NOPLUGINS
+            , GRAYED
+        END
+        MENUITEM "&View Details...",            ID_ICQ_VIEWDETAILS
+        MENUITEM "E&xit",                       ID_ICQ_EX
+    END
+    POPUP "&Status"
+    BEGIN
+        MENUITEM "&Offine\tCtrl+0",             ID_ICQ_STATUS_OFFLINE
+        , CHECKED
+        MENUITEM "O&nline\tCtrl+1",             ID_ICQ_STATUS_ONLINE
+        MENUITEM "&Away\tCtrl+2",               ID_ICQ_STATUS_AWAY
+        MENUITEM "&DND\tCtrl+3",                ID_ICQ_STATUS_DND
+        MENUITEM "&NA\tCtrl+4",                 ID_ICQ_STATUS_NA
+        MENUITEM "O&ccupied\tCtrl+5",           ID_ICQ_STATUS_OCCUPIED
+        MENUITEM "&Free chat\tCtrl+6",          ID_ICQ_STATUS_FREECHAT
+        MENUITEM "&Invisible\tCtrl+7",          ID_ICQ_STATUS_INVISIBLE
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "Index...\tF1",                ID_HELP_WINDEX
+        MENUITEM "&Check for upgrades...",      ID_HELP_CKECKFORUPGRADES
+        MENUITEM SEPARATOR
+        MENUITEM "&Miranda Website...",         ID_HELP_MIRANDAWEBSITE
+        MENUITEM "&About...",                   ID_HELP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_MIRANDA             ICON    DISCARDABLE     "icon1.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUT DIALOG DISCARDABLE  0, 0, 186, 114
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,68,93,50,14
+    LTEXT           "Miranda ICQ",IDC_STATIC,72,7,40,8
+    CTEXT           "http://miranda-icq.sourceforge.net",IDC_STATIC,7,23,172,
+                    8
+    CTEXT           "figbug@users.sourceforge.net",IDC_STATIC,7,34,172,8
+    LTEXT           "This software is released under the terms of the",
+                    IDC_STATIC,18,62,149,8
+    LTEXT           "GNU General Public License",IDC_STATIC,47,74,92,8
+    CTEXT           "Tristan_vdv@users.sourceforge.net",IDC_STATIC,7,44,172,
+                    8
+END
+
+IDD_MSGRECV DIALOG DISCARDABLE  0, 0, 257, 146
+STYLE DS_MODALFRAME | DS_NOFAILCREATE | DS_CENTER | WS_MINIMIZEBOX | 
+    WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Message Recieved"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "&Reply",IDOK,139,124,50,15
+    PUSHBUTTON      "&A",IDC_ADD,112,30,13,12,WS_DISABLED
+    PUSHBUTTON      "&D",IDC_DETAILS,95,30,13,12
+    DEFPUSHBUTTON   "Dis&miss",IDCANCEL,67,124,50,15
+    LTEXT           "From:",IDC_STATIC,7,33,18,8
+    EDITTEXT        IDC_FROM,26,30,66,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Date:",IDC_STATIC,151,33,18,8
+    EDITTEXT        IDC_DATE,178,30,72,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_ICQ,210,124,40,15,ES_AUTOHSCROLL | ES_READONLY | NOT 
+                    WS_VISIBLE
+    EDITTEXT        IDC_MSG,7,47,243,71,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_READONLY | WS_VSCROLL
+    PUSHBUTTON      "&H",IDC_HISTORY,129,30,13,12
+    CONTROL         150,IDC_STATIC,"Static",SS_BITMAP,0,0,333,26
+    CONTROL         154,IDC_STATIC,"Static",SS_BITMAP,89,17,73,8
+END
+
+IDD_MSGSEND DIALOG DISCARDABLE  0, 0, 274, 135
+STYLE DS_MODALFRAME | DS_NOFAILCREATE | DS_CENTER | WS_MINIMIZEBOX | 
+    WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Send Message"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_BODY,7,47,260,58,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_WANTRETURN | WS_VSCROLL
+    DEFPUSHBUTTON   "&Send",IDOK,73,114,50,14
+    PUSHBUTTON      "&Cancel",IDCANCEL,149,114,50,14
+    LTEXT           "To:",IDC_STATIC,7,33,12,8
+    EDITTEXT        IDC_NAME,21,31,229,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_ICQ,215,114,52,14,ES_AUTOHSCROLL | ES_READONLY | NOT 
+                    WS_VISIBLE
+    PUSHBUTTON      "&H",IDC_HISTORY,254,31,13,12
+    CONTROL         150,IDC_STATIC,"Static",SS_BITMAP,0,0,333,26
+    CONTROL         155,IDC_STATIC,"Static",SS_BITMAP,88,18,59,8
+END
+
+IDD_ADDCONTACT1 DIALOG DISCARDABLE  0, 0, 186, 84
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Add Contact"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "ICQ #",IDC_STATIC,7,32,172,27
+    EDITTEXT        IDC_ICQ,11,41,162,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,38,63,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,96,63,50,14
+    CONTROL         150,IDC_STATIC,"Static",SS_BITMAP,0,0,333,26
+    CONTROL         156,IDC_STATIC,"Static",SS_BITMAP,89,17,50,7
+END
+
+IDD_GNUPL DIALOG DISCARDABLE  75, 75, 317, 246
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "GNU General Public License"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&Accept",IDOK,200,220,50,14
+    PUSHBUTTON      "&Decline",IDCANCEL,255,220,50,14
+    GROUPBOX        "GPL",IDC_STATIC,5,27,305,213
+    EDITTEXT        IDC_TEXT,10,36,295,178,ES_MULTILINE | ES_AUTOHSCROLL | 
+                    WS_VSCROLL
+    CONTROL         150,IDC_STATIC,"Static",SS_BITMAP,0,0,333,26
+END
+
+IDD_PASSWORD DIALOG DISCARDABLE  0, 0, 186, 71
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ICQ# & Password"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "ICQ#:",IDC_STATIC,7,31,13,8
+    EDITTEXT        IDC_ICQNUM,47,31,78,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Password:",IDC_STATIC,7,50,34,8
+    EDITTEXT        IDC_PASSWORD,47,50,78,14,ES_PASSWORD | ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,129,31,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,48,50,14
+    CONTROL         150,IDC_STATIC,"Static",SS_BITMAP,1,0,333,26
+    CONTROL         152,IDC_STATIC,"Static",SS_BITMAP,90,17,71,7
+END
+
+IDD_ADDED DIALOG DISCARDABLE  0, 0, 179, 85
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "You were added"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&Add To Contact List",IDOK,94,64,78,14
+    PUSHBUTTON      "&Dismiss",IDCANCEL,7,64,78,14
+    LTEXT           "The following user add you to their contact list:",
+                    IDC_STATIC,7,32,147,8
+    EDITTEXT        IDC_NAME,7,45,165,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_ICQ,132,17,40,14,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    CONTROL         150,IDC_STATIC,"Static",SS_BITMAP,0,0,333,26
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 107
+    END
+
+    IDD_MSGRECV, DIALOG
+    BEGIN
+        RIGHTMARGIN, 250
+        BOTTOMMARGIN, 139
+    END
+
+    IDD_MSGSEND, DIALOG
+    BEGIN
+        RIGHTMARGIN, 267
+        BOTTOMMARGIN, 128
+    END
+
+    IDD_ADDCONTACT1, DIALOG
+    BEGIN
+        RIGHTMARGIN, 179
+        BOTTOMMARGIN, 77
+    END
+
+    IDD_GNUPL, DIALOG
+    BEGIN
+        RIGHTMARGIN, 310
+        BOTTOMMARGIN, 239
+    END
+
+    IDD_PASSWORD, DIALOG
+    BEGIN
+        LEFTMARGIN, 1
+        RIGHTMARGIN, 179
+        VERTGUIDE, 7
+        BOTTOMMARGIN, 64
+    END
+
+    IDD_ADDED, DIALOG
+    BEGIN
+        RIGHTMARGIN, 172
+        BOTTOMMARGIN, 78
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (Australia) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENA)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_AUS
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_SENDURL             ICON    DISCARDABLE     "sendurl.ico"
+IDI_RECVMSG             ICON    DISCARDABLE     "message.ico"
+IDI_SENDMSG             ICON    DISCARDABLE     "reply.ico"
+IDI_RECVURL             ICON    DISCARDABLE     "geturl.ico"
+IDI_NA                  ICON    DISCARDABLE     "NA2.ico"
+IDI_AWAY                ICON    DISCARDABLE     "ico00003.ico"
+IDI_FREE4CHAT           ICON    DISCARDABLE     "ico00008.ico"
+IDI_UNREAD              ICON    DISCARDABLE     "unread.ico"
+IDI_ONLINE              ICON    DISCARDABLE     "online2.ico"
+IDI_OFFLINE             ICON    DISCARDABLE     "offline2.ico"
+IDI_DND                 ICON    DISCARDABLE     "dnd.ico"
+IDI_OCCUPIED            ICON    DISCARDABLE     "occupied.ico"
+IDI_USERDETAILS         ICON    DISCARDABLE     "Icos\\userdetails.ico"
+IDI_FINDUSER            ICON    DISCARDABLE     "Icos\\finduser.ico"
+IDI_HELP                ICON    DISCARDABLE     "Icos\\help.ico"
+IDI_OPTIONS             ICON    DISCARDABLE     "Icos\\options.ico"
+IDI_CHECKFORUPGRADE     ICON    DISCARDABLE     "Icos\\checkupgrade.ico"
+IDI_OPTIONS_PROXY       ICON    DISCARDABLE     "Icos\\ops_proxy.ico"
+IDI_OPTIONS_SOUND       ICON    DISCARDABLE     "Icos\\ops_sound.ico"
+IDI_OPTIONS_PLUGINS     ICON    DISCARDABLE     "Icos\\ops_plugins.ico"
+IDI_OPTIONS_GENERAL     ICON    DISCARDABLE     "icos\\icon1.ico"
+IDI_OPTIONS_ICQNPASSWORD ICON    DISCARDABLE     "Icos\\ops_icqnPass.ico"
+IDI_UNREAD2             ICON    DISCARDABLE     "icos\\unread2.ico"
+IDI_MIRANDAWEBSITE      ICON    DISCARDABLE     "icos\\mirandaw.ico"
+IDI_RENAME              ICON    DISCARDABLE     "Icos\\rename.ico"
+IDI_HISTORY             ICON    DISCARDABLE     "Icos\\history.ico"
+IDI_DELETE              ICON    DISCARDABLE     "Icos\\delete.ico"
+IDI_IGNORE              ICON    DISCARDABLE     "Icos\\ignore.ico"
+IDI_IMPORT              ICON    DISCARDABLE     "Icos\\import.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_TITLE               BITMAP  DISCARDABLE     "bmp\\Title.bmp"
+IDB_OPTIONS_GEN         BITMAP  DISCARDABLE     "bmp\\DLG_Options_Gen.bmp"
+IDB_OPTIONS_PASSWORD    BITMAP  DISCARDABLE     "bmp\\DLG_Options_password.bmp"
+IDB_DETAILS             BITMAP  DISCARDABLE     "bmp\\DLG_Details.bmp"
+IDB_MSG_RECV            BITMAP  DISCARDABLE     "bmp\\DLG_Message_rec.bmp"
+IDB_MSG_SEND            BITMAP  DISCARDABLE     "bmp\\DLG_message_send.bmp"
+IDB_CONTACT_ADD         BITMAP  DISCARDABLE     "bmp\\DLG_Contact_Add.bmp"
+IDB_URL_SEND            BITMAP  DISCARDABLE     "bmp\\DLG_url_send.bmp"
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 0,0,6,1
+ PRODUCTVERSION 0,0,6,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "000004b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", " \0"
+            VALUE "FileDescription", "miranda32\0"
+            VALUE "FileVersion", "0,0,6,1\0"
+            VALUE "InternalName", "miranda32\0"
+            VALUE "LegalCopyright", "Copyright © 2000, Roland Rabien & Tristan Van de Vreede\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "miranda32.exe\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "Miranda ICQ\0"
+            VALUE "ProductVersion", "0,0,6,1\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0, 1200
+    END
+END
+
+#endif    // !_MAC
+
+#endif    // English (Australia) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (Canada) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENC)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_CAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_CONTEXT MENU DISCARDABLE 
+BEGIN
+    POPUP "TRAY"
+    BEGIN
+        MENUITEM "&Hide/Show",                  ID_TRAY_HIDE
+        MENUITEM "&About...",                   ID_TRAY_ABOUT
+        MENUITEM SEPARATOR
+        MENUITEM "&Exit",                       ID_TRAY_EXIT
+    END
+    POPUP "CONTACT"
+    BEGIN
+        MENUITEM "&Send Message...",            POPUP_SENDMSG
+        MENUITEM "Send &URL....",               POPUP_SENDURL
+        MENUITEM "&History...",                 POPUP_HISTORY
+        MENUITEM "User &Details...",            POPUP_USERDETAILS
+        MENUITEM "&Ignore User",                POPUP_IGNORE
+        MENUITEM "&Rename User",                POPUP_RENAME
+        MENUITEM "&Delete User...",             POPUP_DELETE
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_INVISIBLE           ICON    DISCARDABLE     "ico00006.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SENDURL DIALOG DISCARDABLE  0, 0, 274, 162
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Send URL"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "To:",IDC_STATIC,7,34,12,8
+    EDITTEXT        IDC_NAME,28,32,238,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_BODY,7,52,259,55,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_WANTRETURN
+    LTEXT           "URL:",IDC_STATIC,7,112,18,8
+    COMBOBOX        IDC_URLS,7,122,259,92,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    DEFPUSHBUTTON   "&Send",IDOK,75,141,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,148,141,50,14
+    EDITTEXT        IDC_ICQ,226,141,40,14,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    CONTROL         150,IDC_STATIC,"Static",SS_BITMAP,0,0,333,26
+    CONTROL         157,IDC_STATIC,"Static",SS_BITMAP,89,17,39,7
+END
+
+IDD_URLRECV DIALOG DISCARDABLE  0, 0, 257, 167
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "URL Recieved"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "From:",IDC_STATIC,7,37,18,8
+    EDITTEXT        IDC_FROM,31,34,81,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Date:",IDC_STATIC,117,37,18,8
+    EDITTEXT        IDC_DATE,141,34,109,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_MSG,7,52,243,54,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_READONLY
+    LTEXT           "URL:",IDC_STATIC,7,110,18,8
+    EDITTEXT        IDC_URL,7,124,243,14,ES_AUTOHSCROLL | ES_READONLY
+    DEFPUSHBUTTON   "&Launch",IDOK,46,146,50,14
+    PUSHBUTTON      "&Dismiss",IDCANCEL,162,146,50,14
+    PUSHBUTTON      "&Reply",IDC_REPLY,104,146,50,14
+    EDITTEXT        IDC_ICQ,210,146,40,14,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    CONTROL         150,IDC_STATIC,"Static",SS_BITMAP,0,0,333,26
+END
+
+IDD_AUTHREQ DIALOG DISCARDABLE  0, 0, 248, 135
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Authorization Request"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&Authorize",IDOK,65,114,50,14
+    PUSHBUTTON      "&Dismiss",IDCANCEL,131,114,50,14
+    LTEXT           "From:",IDC_STATIC,7,35,18,8
+    LTEXT           "Reason:",IDC_STATIC,7,57,28,8
+    EDITTEXT        IDC_NAME,42,35,199,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_REASON,42,52,199,56,ES_MULTILINE | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_ICQ,201,114,40,14,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    CONTROL         150,IDC_STATIC,"Static",SS_BITMAP,0,0,333,26
+END
+
+IDD_ADDCONTACT2 DIALOG DISCARDABLE  0, 0, 186, 90
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Add Contact"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "E-mail Address",IDC_STATIC,7,31,172,34
+    EDITTEXT        IDC_EMAIL,14,42,155,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,42,70,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,101,70,50,14
+    CONTROL         150,IDC_STATIC,"Static",SS_BITMAP,0,0,333,26
+    CONTROL         156,IDC_STATIC,"Static",SS_BITMAP,90,18,50,7
+END
+
+IDD_RESULTS DIALOG DISCARDABLE  0, 0, 310, 218
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Searching..."
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&Add",IDOK,99,197,50,14
+    PUSHBUTTON      "Done",IDCANCEL,161,197,50,14
+    CONTROL         "List1",IDC_CONTACTS,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_NOSORTHEADER | WS_BORDER | 
+                    WS_TABSTOP,7,33,296,159
+    CONTROL         150,IDC_STATIC,"Static",SS_BITMAP,0,0,333,26
+END
+
+IDD_ADDCONTACT3 DIALOG DISCARDABLE  0, 0, 247, 110
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Add Contact"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Nickname:",IDC_STATIC,7,35,35,8
+    EDITTEXT        IDC_NICK,50,32,190,14,ES_AUTOHSCROLL
+    LTEXT           "First name:",IDC_STATIC,7,54,35,8
+    EDITTEXT        IDC_FIRST,50,51,190,14,ES_AUTOHSCROLL
+    LTEXT           "Last name:",IDC_STATIC,7,72,36,8
+    EDITTEXT        IDC_LAST,50,70,190,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,62,89,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,134,89,50,14
+    CONTROL         150,IDC_STATIC,"Static",SS_BITMAP,0,0,333,26
+    CONTROL         156,IDC_STATIC,"Static",SS_BITMAP,89,17,50,7
+END
+
+IDD_DETAILS DIALOG DISCARDABLE  0, 0, 308, 207
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "User Details"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "First name:",IDC_STATIC,7,31,35,8
+    EDITTEXT        IDC_FIRST,46,28,70,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Last name:",IDC_STATIC,121,31,36,8
+    EDITTEXT        IDC_LAST,159,29,69,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Gender:",IDC_STATIC,237,31,26,8
+    EDITTEXT        IDC_GENDER,270,29,30,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Nickname:",IDC_STATIC,7,50,37,8
+    EDITTEXT        IDC_NICK,46,47,70,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "E-mail:",IDC_STATIC,123,50,22,8
+    EDITTEXT        IDC_EMAIL,159,48,119,12,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "GO",IDC_GO2,284,48,17,12
+    LTEXT           "City:",IDC_STATIC,7,69,14,8
+    EDITTEXT        IDC_CITY,46,67,40,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "State:",IDC_STATIC,90,69,20,8
+    EDITTEXT        IDC_STATE,121,67,20,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Country:",IDC_STATIC,146,69,27,8
+    EDITTEXT        IDC_COUNTRY,181,67,56,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Age:",IDC_STATIC,245,69,16,8
+    EDITTEXT        IDC_AGE,267,67,33,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Phone:",IDC_STATIC,7,93,24,8
+    EDITTEXT        IDC_PHONE,46,90,53,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Webpage:",IDC_STATIC,105,93,34,8
+    EDITTEXT        IDC_HP,143,91,133,12,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "GO",IDC_GO,283,91,17,12
+    LTEXT           "About:",IDC_STATIC,7,126,22,8
+    EDITTEXT        IDC_ABOUT,46,130,255,62,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_READONLY | WS_VSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,7,178,32,14
+    LTEXT           "IP:",IDC_STATIC,7,112,8,8
+    EDITTEXT        IDC_IP,46,110,137,12,ES_AUTOHSCROLL | ES_READONLY
+    CONTROL         150,IDC_STATIC,"Static",SS_BITMAP,0,0,333,26
+    CONTROL         153,IDC_STATIC,"Static",SS_BITMAP,89,18,49,7
+END
+
+IDD_GENERALOPT DIALOG DISCARDABLE  0, 0, 210, 135
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "General Options"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,98,114,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,153,114,50,14
+    CONTROL         "Minimize to tray",IDC_MIN2TRAY,"Button",BS_AUTOCHECKBOX | 
+                    BS_FLAT | WS_TABSTOP,10,35,64,10
+    CONTROL         "Always on top",IDC_ONTOP,"Button",BS_AUTOCHECKBOX | 
+                    BS_FLAT | WS_TABSTOP,10,45,60,10
+    CONTROL         "Transparent contact list (W2K only)",IDC_TRANSP,"Button",
+                    BS_AUTOCHECKBOX | BS_FLAT | WS_TABSTOP,10,55,127,10
+    CONTROL         150,IDC_STATIC,"Static",SS_BITMAP,0,0,333,26
+    CONTROL         151,IDC_STATIC,"Static",SS_BITMAP,87,17,67,8
+    CONTROL         "Store Config in .ini file",IDC_USEINI,"Button",
+                    BS_AUTOCHECKBOX | BS_FLAT | WS_TABSTOP,10,65,83,10
+    CONTROL         "Popup incoming notes when online",IDC_POPUP,"Button",
+                    BS_AUTOCHECKBOX | BS_FLAT | WS_TABSTOP,10,75,126,10
+    CONTROL         "Tool style main window",IDC_TOOLWND,"Button",
+                    BS_AUTOCHECKBOX | BS_FLAT | WS_TABSTOP,10,85,89,10
+    CONTROL         "Single Click Tray",IDC_ONECLK,"Button",BS_AUTOCHECKBOX | 
+                    BS_FLAT | WS_TABSTOP,10,95,69,10
+END
+
+IDD_HISTORY DIALOG DISCARDABLE  0, 0, 296, 183
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Message History"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,239,162,50,14
+    EDITTEXT        IDC_EDIT,7,85,282,74,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_READONLY | WS_VSCROLL
+    LISTBOX         IDC_LIST,7,31,282,50,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         150,IDC_STATIC,"Static",SS_BITMAP,0,0,333,26
+END
+
+IDD_SOUND DIALOG DISCARDABLE  0, 0, 305, 218
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Sounds"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,190,197,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,248,197,50,14
+    CONTROL         "&Enable Sounds",IDC_USESOUND,"Button",BS_AUTOCHECKBOX | 
+                    BS_FLAT | WS_TABSTOP,7,35,64,10
+    LTEXT           "Log-in",IDC_STATIC,7,49,20,8
+    EDITTEXT        IDC_SOUND1,83,46,157,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Browse",IDC_B1,248,46,50,14
+    LTEXT           "Disconnection",IDC_STATIC,7,65,46,8
+    EDITTEXT        IDC_SOUND2,83,62,157,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Browse",IDC_B2,248,62,50,14
+    LTEXT           "Recieve Message",IDC_STATIC,7,81,58,8
+    EDITTEXT        IDC_SOUND3,83,78,157,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Browse",IDC_B3,248,78,50,14
+    LTEXT           "Recieve URL",IDC_STATIC,7,97,44,8
+    EDITTEXT        IDC_SOUND4,83,94,157,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Browse",IDC_B4,248,94,50,14
+    LTEXT           "User Online",IDC_STATIC,7,113,38,8
+    EDITTEXT        IDC_SOUND5,83,110,157,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Browse",IDC_B5,248,110,50,14
+    LTEXT           "User Offline",IDC_STATIC,7,129,38,8
+    EDITTEXT        IDC_SOUND6,83,126,157,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Browse",IDC_B6,248,126,50,14
+    LTEXT           "Added to contact list",IDC_STATIC,7,145,66,8
+    EDITTEXT        IDC_SOUND7,83,143,157,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Browse",IDC_B7,248,142,50,14
+    LTEXT           "Authorization Request",IDC_STATIC,7,161,70,8
+    EDITTEXT        IDC_SOUND8,83,159,157,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Browse",IDC_B8,248,158,50,14
+    LTEXT           "Error",IDC_STATIC,7,178,16,8
+    EDITTEXT        IDC_SOUND9,83,177,157,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Browse",IDC_B9,248,175,50,14
+    CONTROL         150,IDC_STATIC,"Static",SS_BITMAP,0,0,333,26
+END
+
+IDD_PROXY DIALOG DISCARDABLE  0, 0, 228, 138
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Proxy Settings"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,117,117,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,171,117,50,14
+    CONTROL         "Use Proxy Server",IDC_USE,"Button",BS_AUTOCHECKBOX | 
+                    BS_FLAT | WS_TABSTOP,7,33,71,10
+    LTEXT           "Proxy Server:",IDC_STATIC,7,47,43,8
+    EDITTEXT        IDC_HOST,55,46,103,12,ES_AUTOHSCROLL
+    LTEXT           "Port:",IDC_STATIC,163,47,16,8
+    EDITTEXT        IDC_PORT,181,46,40,12,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Proxy Requires Authorization",IDC_AUTH,"Button",
+                    BS_AUTOCHECKBOX | BS_FLAT | WS_TABSTOP,7,65,106,10
+    LTEXT           "Username:",IDC_STATIC,7,84,35,8
+    LTEXT           "Password:",IDC_STATIC,7,100,34,8
+    EDITTEXT        IDC_NAME,53,82,113,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PASS,53,97,114,12,ES_PASSWORD | ES_AUTOHSCROLL
+    CONTROL         150,IDC_STATIC,"Static",SS_BITMAP,0,0,333,26
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_SENDURL, DIALOG
+    BEGIN
+        RIGHTMARGIN, 266
+        BOTTOMMARGIN, 155
+    END
+
+    IDD_URLRECV, DIALOG
+    BEGIN
+        RIGHTMARGIN, 250
+        BOTTOMMARGIN, 160
+    END
+
+    IDD_AUTHREQ, DIALOG
+    BEGIN
+        RIGHTMARGIN, 241
+        VERTGUIDE, 42
+        BOTTOMMARGIN, 128
+    END
+
+    IDD_ADDCONTACT2, DIALOG
+    BEGIN
+        RIGHTMARGIN, 179
+        BOTTOMMARGIN, 84
+    END
+
+    IDD_RESULTS, DIALOG
+    BEGIN
+        RIGHTMARGIN, 303
+        BOTTOMMARGIN, 211
+    END
+
+    IDD_ADDCONTACT3, DIALOG
+    BEGIN
+        RIGHTMARGIN, 240
+        VERTGUIDE, 50
+        BOTTOMMARGIN, 103
+        HORZGUIDE, 32
+        HORZGUIDE, 51
+    END
+
+    IDD_DETAILS, DIALOG
+    BEGIN
+        RIGHTMARGIN, 301
+        VERTGUIDE, 46
+        VERTGUIDE, 300
+        BOTTOMMARGIN, 200
+        HORZGUIDE, 38
+        HORZGUIDE, 57
+        HORZGUIDE, 81
+        HORZGUIDE, 100
+        HORZGUIDE, 110
+    END
+
+    IDD_GENERALOPT, DIALOG
+    BEGIN
+        RIGHTMARGIN, 203
+        VERTGUIDE, 10
+        BOTTOMMARGIN, 128
+        HORZGUIDE, 40
+        HORZGUIDE, 50
+        HORZGUIDE, 60
+        HORZGUIDE, 70
+        HORZGUIDE, 80
+        HORZGUIDE, 90
+        HORZGUIDE, 100
+    END
+
+    IDD_HISTORY, DIALOG
+    BEGIN
+        RIGHTMARGIN, 289
+        BOTTOMMARGIN, 176
+    END
+
+    IDD_SOUND, DIALOG
+    BEGIN
+        RIGHTMARGIN, 298
+        VERTGUIDE, 83
+        VERTGUIDE, 240
+        VERTGUIDE, 248
+        BOTTOMMARGIN, 211
+        HORZGUIDE, 40
+        HORZGUIDE, 56
+        HORZGUIDE, 72
+        HORZGUIDE, 88
+        HORZGUIDE, 104
+        HORZGUIDE, 121
+        HORZGUIDE, 137
+        HORZGUIDE, 154
+    END
+
+    IDD_PROXY, DIALOG
+    BEGIN
+        RIGHTMARGIN, 221
+        BOTTOMMARGIN, 131
+        HORZGUIDE, 65
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_ACCEL ACCELERATORS DISCARDABLE 
+BEGIN
+    "0",            ID_ICQ_STATUS_OFFLINE,  VIRTKEY, CONTROL, NOINVERT
+    "1",            ID_ICQ_STATUS_ONLINE,   VIRTKEY, CONTROL, NOINVERT
+    "2",            ID_ICQ_STATUS_AWAY,     VIRTKEY, CONTROL, NOINVERT
+    "3",            ID_ICQ_STATUS_DND,      VIRTKEY, CONTROL, NOINVERT
+    "4",            ID_ICQ_STATUS_NA,       VIRTKEY, CONTROL, NOINVERT
+    "5",            ID_ICQ_STATUS_OCCUPIED, VIRTKEY, CONTROL, NOINVERT
+    "6",            ID_ICQ_STATUS_FREECHAT, VIRTKEY, CONTROL, NOINVERT
+    "7",            ID_ICQ_STATUS_INVISIBLE, VIRTKEY, CONTROL, NOINVERT
+    "U",            POPUP_SENDURL,          VIRTKEY, CONTROL, NOINVERT
+    VK_F1,          ID_HELP_WINDEX,         VIRTKEY, NOINVERT
+    VK_RETURN,      ID_CTRLENTER,           VIRTKEY, CONTROL, NOINVERT
+END
+
+#endif    // English (Canada) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

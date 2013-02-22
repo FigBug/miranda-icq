@@ -1,0 +1,11 @@
+- event-driven model
+
++ TCP part of ICQ protocol      (Done in 0.2.0)
++ new user registration         (Done in 0.2.0)
++ chat                          (Done in 0.2.0)
++ file transfer                 (Done in 0.2.0)
+
++ SOCKS5 proxy support          (Done in 0.1.3)
+
++ search by ICQ#                (Done in 0.1.2)
++ add user to contact list      (Done in 0.1.x)

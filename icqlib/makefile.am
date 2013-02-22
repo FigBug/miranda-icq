@@ -1,0 +1,26 @@
+VERSION = $(shell cat ../VERSION)
+
+lib_LTLIBRARIES = libicq.la
+
+libicq_la_SOURCES = \
+chatsession.c contacts.c cyrillic.c icqbyteorder.c icqlib.c \
+icqpacket.c list.c proxy.c queue.c stdpackets.c tcp.c \
+tcpchathandle.c tcpfilehandle.c tcphandle.c tcplink.c udp.c udphandle.c \
+util.c filesession.c
+
+libicq_MAJOR = $(shell echo $(VERSION) | sed 's/\([[0-9]]*\).\([[0-9]]*\).\([[0-9]]*\)/\1/')
+libicq_AGE = $(shell echo $(VERSION) | sed 's/\([[0-9]]*\).\([[0-9]]*\).\([[0-9]]*\)/\2/')
+libicq_REVISION = $(shell echo $(VERSION) | sed 's/\([[0-9]]*\).\([[0-9]]*\).\([[0-9]]*\)/\3/')
+libicq_CURRENT = $(shell expr $(libicq_MAJOR) + $(libicq_AGE))
+
+libicq_la_LDFLAGS = -version-info $(libicq_CURRENT):$(libicq_REVISION):$(libicq_AGE)
+include_HEADERS = icq.h
+
+noinst_HEADERS = \
+chatsession.h contacts.h icqbyteorder.h icqlib.h icqpacket.h icqtypes.h \
+list.h queue.h stdpackets.h tcp.h tcplink.h udp.h util.h \
+filesession.h
+
+DISTCLEANFILES = *~ \#*\#
+
+MAINTAINERCLEANFILES = Makefile.in icq.h

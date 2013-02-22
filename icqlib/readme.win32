@@ -1,0 +1,60 @@
+Win32 port of icqlib.
+---------------------
+Guillaume Rosanis
+grs@mail.com
+
+
+Notes:
+------
+
+1. Macros that need to be defined in order to compile properly.
+
+	_WIN32
+
+	BYTE_ORDER_LITTLE_ENDIAN   (on x86 Win32 platforms)
+
+I modified icqbyteorder.h and added a conditional compilation
+with this macro because BIG_ENDIAN and LITTLE_ENDIAN were defined
+nowhere (string comparison not allowed here in, at least, the preprocessor
+that comes with MS VC++).
+
+
+2. Additional libraries.
+
+Executables using icqlib should be linked with wsock32.lib (VC++).
+( -lwsock32 with gcc)
+
+
+3. Win32 specifics.
+
+Like in any case where using Winsock, one should initialize Winsock once with
+WSAStartup() before even using any function in icqlib, and call WSACleanup()
+when one is done with using it (at program exit time for instance).
+
+I put a VC++ 5.0 project file in the Win32.zip file. It can be opened directly
+in VC++ in order to compile the library.
+icq.h header file which is automatically generated on Unix is also packaged
+in Win32.zip file.
+I haven't provided a gcc Makefile yet, but it should be rather straightforward
+to write (defining the above macros for each compilation).
+It compiles fine with gcc 2.95/Mingw32 though.
+
+
+4. Modified files.
+
+icq.h
+icqbyteorder.h
+icqlib.c
+icqlib.h
+icqpacket.c
+icqtypes.h
+proxy.c
+tcp.c
+tcpchathandle.c
+tcpfilehandle.c
+tcphandle.c
+tcplink.c
+tcplink.h
+udp.c
+util.c
+util.h

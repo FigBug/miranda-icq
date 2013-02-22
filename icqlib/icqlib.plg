@@ -1,0 +1,124 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: icqlib - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP43.tmp" with contents
+[
+/nologo /ML /W3 /GX /D "WIN32" /D "NDEBUG" /D "_MBCS" /D "_LIB" /D "_MSVC_" /Fp"Release/icqlib.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Program Files\DevStudio\MyProjects\miranda\icqlib\chatsession.c"
+"C:\Program Files\DevStudio\MyProjects\miranda\icqlib\contacts.c"
+"C:\Program Files\DevStudio\MyProjects\miranda\icqlib\cyrillic.c"
+"C:\Program Files\DevStudio\MyProjects\miranda\icqlib\filesession.c"
+"C:\Program Files\DevStudio\MyProjects\miranda\icqlib\icqbyteorder.c"
+"C:\Program Files\DevStudio\MyProjects\miranda\icqlib\icqlib.c"
+"C:\Program Files\DevStudio\MyProjects\miranda\icqlib\icqpacket.c"
+"C:\Program Files\DevStudio\MyProjects\miranda\icqlib\list.c"
+"C:\Program Files\DevStudio\MyProjects\miranda\icqlib\proxy.c"
+"C:\Program Files\DevStudio\MyProjects\miranda\icqlib\queue.c"
+"C:\Program Files\DevStudio\MyProjects\miranda\icqlib\stdpackets.c"
+"C:\Program Files\DevStudio\MyProjects\miranda\icqlib\tcp.c"
+"C:\Program Files\DevStudio\MyProjects\miranda\icqlib\tcpchathandle.c"
+"C:\Program Files\DevStudio\MyProjects\miranda\icqlib\tcpfilehandle.c"
+"C:\Program Files\DevStudio\MyProjects\miranda\icqlib\tcphandle.c"
+"C:\Program Files\DevStudio\MyProjects\miranda\icqlib\tcplink.c"
+"C:\Program Files\DevStudio\MyProjects\miranda\icqlib\udp.c"
+"C:\Program Files\DevStudio\MyProjects\miranda\icqlib\udphandle.c"
+"C:\Program Files\DevStudio\MyProjects\miranda\icqlib\util.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP43.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP44.tmp" with contents
+[
+/nologo /out:"Release\icqlib.lib" 
+".\Release\chatsession.obj"
+".\Release\contacts.obj"
+".\Release\cyrillic.obj"
+".\Release\filesession.obj"
+".\Release\icqbyteorder.obj"
+".\Release\icqlib.obj"
+".\Release\icqpacket.obj"
+".\Release\list.obj"
+".\Release\proxy.obj"
+".\Release\queue.obj"
+".\Release\stdpackets.obj"
+".\Release\tcp.obj"
+".\Release\tcpchathandle.obj"
+".\Release\tcpfilehandle.obj"
+".\Release\tcphandle.obj"
+".\Release\tcplink.obj"
+".\Release\udp.obj"
+".\Release\udphandle.obj"
+".\Release\util.obj"
+]
+Creating command line "link.exe -lib @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP44.tmp"
+<h3>Output Window</h3>
+Compiling...
+chatsession.c
+contacts.c
+cyrillic.c
+filesession.c
+icqbyteorder.c
+icqlib.c
+icqpacket.c
+C:\Program Files\DevStudio\MyProjects\miranda\icqlib\icqlib.c(537) : warning C4761: integral size mismatch in argument; conversion supplied
+list.c
+C:\Program Files\DevStudio\MyProjects\miranda\icqlib\icqpacket.c(190) : warning C4761: integral size mismatch in argument; conversion supplied
+proxy.c
+queue.c
+stdpackets.c
+tcp.c
+tcpchathandle.c
+tcpfilehandle.c
+C:\Program Files\DevStudio\MyProjects\miranda\icqlib\tcpchathandle.c(115) : warning C4761: integral size mismatch in argument; conversion supplied
+C:\Program Files\DevStudio\MyProjects\miranda\icqlib\tcpchathandle.c(115) : warning C4761: integral size mismatch in argument; conversion supplied
+C:\Program Files\DevStudio\MyProjects\miranda\icqlib\tcpchathandle.c(115) : warning C4761: integral size mismatch in argument; conversion supplied
+C:\Program Files\DevStudio\MyProjects\miranda\icqlib\tcpchathandle.c(115) : warning C4761: integral size mismatch in argument; conversion supplied
+C:\Program Files\DevStudio\MyProjects\miranda\icqlib\tcpchathandle.c(115) : warning C4761: integral size mismatch in argument; conversion supplied
+tcphandle.c
+C:\Program Files\DevStudio\MyProjects\miranda\icqlib\tcpfilehandle.c(99) : warning C4761: integral size mismatch in argument; conversion supplied
+C:\Program Files\DevStudio\MyProjects\miranda\icqlib\tcpfilehandle.c(99) : warning C4761: integral size mismatch in argument; conversion supplied
+C:\Program Files\DevStudio\MyProjects\miranda\icqlib\tcpfilehandle.c(99) : warning C4761: integral size mismatch in argument; conversion supplied
+C:\Program Files\DevStudio\MyProjects\miranda\icqlib\tcpfilehandle.c(99) : warning C4761: integral size mismatch in argument; conversion supplied
+C:\Program Files\DevStudio\MyProjects\miranda\icqlib\tcpfilehandle.c(99) : warning C4761: integral size mismatch in argument; conversion supplied
+tcplink.c
+C:\Program Files\DevStudio\MyProjects\miranda\icqlib\tcphandle.c(311) : warning C4761: integral size mismatch in argument; conversion supplied
+C:\Program Files\DevStudio\MyProjects\miranda\icqlib\tcphandle.c(311) : warning C4761: integral size mismatch in argument; conversion supplied
+C:\Program Files\DevStudio\MyProjects\miranda\icqlib\tcphandle.c(311) : warning C4761: integral size mismatch in argument; conversion supplied
+C:\Program Files\DevStudio\MyProjects\miranda\icqlib\tcphandle.c(311) : warning C4761: integral size mismatch in argument; conversion supplied
+C:\Program Files\DevStudio\MyProjects\miranda\icqlib\tcphandle.c(311) : warning C4761: integral size mismatch in argument; conversion supplied
+C:\Program Files\DevStudio\MyProjects\miranda\icqlib\tcphandle.c(354) : warning C4761: integral size mismatch in argument; conversion supplied
+C:\Program Files\DevStudio\MyProjects\miranda\icqlib\tcphandle.c(354) : warning C4761: integral size mismatch in argument; conversion supplied
+C:\Program Files\DevStudio\MyProjects\miranda\icqlib\tcphandle.c(354) : warning C4761: integral size mismatch in argument; conversion supplied
+C:\Program Files\DevStudio\MyProjects\miranda\icqlib\tcphandle.c(354) : warning C4761: integral size mismatch in argument; conversion supplied
+C:\Program Files\DevStudio\MyProjects\miranda\icqlib\tcphandle.c(354) : warning C4761: integral size mismatch in argument; conversion supplied
+C:\Program Files\DevStudio\MyProjects\miranda\icqlib\tcplink.c(552) : warning C4244: 'function' : conversion from 'unsigned long ' to 'unsigned short ', possible loss of data
+udp.c
+C:\Program Files\DevStudio\MyProjects\miranda\icqlib\tcplink.c(552) : warning C4761: integral size mismatch in argument; conversion supplied
+C:\Program Files\DevStudio\MyProjects\miranda\icqlib\tcplink.c(560) : warning C4761: integral size mismatch in argument; conversion supplied
+udphandle.c
+C:\Program Files\DevStudio\MyProjects\miranda\icqlib\udp.c(532) : warning C4761: integral size mismatch in argument; conversion supplied
+C:\Program Files\DevStudio\MyProjects\miranda\icqlib\udp.c(574) : warning C4761: integral size mismatch in argument; conversion supplied
+C:\Program Files\DevStudio\MyProjects\miranda\icqlib\udp.c(769) : warning C4761: integral size mismatch in argument; conversion supplied
+C:\Program Files\DevStudio\MyProjects\miranda\icqlib\udphandle.c(385) : warning C4244: 'function' : conversion from 'unsigned long ' to 'unsigned short ', possible loss of data
+util.c
+C:\Program Files\DevStudio\MyProjects\miranda\icqlib\udphandle.c(385) : warning C4761: integral size mismatch in argument; conversion supplied
+C:\Program Files\DevStudio\MyProjects\miranda\icqlib\udphandle.c(765) : warning C4761: integral size mismatch in argument; conversion supplied
+C:\Program Files\DevStudio\MyProjects\miranda\icqlib\udphandle.c(818) : warning C4761: integral size mismatch in argument; conversion supplied
+C:\Program Files\DevStudio\MyProjects\miranda\icqlib\udphandle.c(818) : warning C4761: integral size mismatch in argument; conversion supplied
+C:\Program Files\DevStudio\MyProjects\miranda\icqlib\udphandle.c(818) : warning C4761: integral size mismatch in argument; conversion supplied
+C:\Program Files\DevStudio\MyProjects\miranda\icqlib\udphandle.c(818) : warning C4761: integral size mismatch in argument; conversion supplied
+C:\Program Files\DevStudio\MyProjects\miranda\icqlib\udphandle.c(818) : warning C4761: integral size mismatch in argument; conversion supplied
+C:\Program Files\DevStudio\MyProjects\miranda\icqlib\udphandle.c(818) : warning C4761: integral size mismatch in argument; conversion supplied
+C:\Program Files\DevStudio\MyProjects\miranda\icqlib\util.c(455) : warning C4761: integral size mismatch in argument; conversion supplied
+Creating library...
+
+
+
+<h3>Results</h3>
+icqlib.lib - 0 error(s), 38 warning(s)
+</pre>
+</body>
+</html>

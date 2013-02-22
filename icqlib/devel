@@ -1,0 +1,100 @@
+This is the developers' hint guide.
+
+If you plan on working on the icqlib project, here are some tips on
+how to avoid unnecessary breakage, make your development easier and my
+job of merging your code easier, I find them useful.
+
+o  Ask first. If your changes are major, or could possibly break
+   existing code, you should always ask. If your change is minor and
+   you've been working on icqlib for a while it probably isn't
+   necessary to ask. But when in doubt, ask. Even if your change is
+   correct, somebody may know a better way to do things.
+
+   If you are making changes to icqlib project, you should be
+   subscribed to icqlib-dev@lists.sourceforge.net. (Subscription
+   address: icqlib-dev-request@lists.sourceforge.net) This is a good
+   place to ask about intended changes.
+
+o  There must be a ChangeLog for every commit. (If you discover that
+   you only committed half the files you meant to and need to fix that
+   up, or something, you don't need a new ChangeLog entry. But in
+   general, ChangeLog entries are mandatory.) Changes with out
+   ChangeLog entries will be reverted.
+
+o  Every fully finished commit should not break compilation of
+   icqlib. To be sure it wouldn't, just recompile it before commiting
+   your local changes to the repository. You may want to run
+   "make clean all" for this. If your changes touches automake/autoconf
+   stuff, run "make distclean && ./configure && make".
+
+o  Try to keep the indenting style as it is currently! If you are
+   using smart editor like emacs or Xemacs which understand commands
+   enclosed in -*- at the top of the file, you already can use
+   editor's indentation. These commands tells emacs to use NO
+   tabulations for indentation, and indent code at 2 characters. Keep
+   it in mind when you don't use emacs or you're creating a new file.
+
+   You can add a new style in emacs. Put this few lines to your
+   ~/.emacs file:
+
+   (c-add-style "kicq"
+                '((c-basic-offset . 2)
+                  (c-offsets-alist
+                   (substatement-open . 0)
+                   (case-label . +))))
+
+   To enable this indentation style when editing icqlib sources run
+   this:
+
+   `M-x c-set-style <RET> kicq <RET>'
+
+   To make this style your default style put this lines to your
+   ~/.emacs file:
+
+   (add-hook 'c-mode-common-hook
+             '(lambda ()
+                (c-set-style "kicq")
+                (setq tab-width 2)
+                (setq indent-tabs-mode nil)))
+
+o  If you are going to be changing many files in an experimental
+   fashion, it probably is a good idea to create a separate branch for
+   your changes.
+
+o  Run "make depend" if you modify the source code structure (e.g. you
+   add/remove include files).  It will help you to get an accurate
+   compilation.
+
+   It's recommended that you use GNU Make (if you want to use the
+   depend and include features).
+
+o  This code is distributed under the GNU General Public License and
+   keep this in mind when adding code to the program.
+
+o  If at all possible, please use CVS to get the latest development
+   version of icqlib. You can do the following to get icqlib from
+   anonymous CVS server:
+
+   $ export CVSROOT=":pserver:anonymous@cvs.icqlib.sourceforge.net:/cvsroot/icqlib"
+   $ cvs login
+     (there is no password, just hit return)
+   $ cvs -z3 checkout icqlib
+
+   CVSROOT for developers CVS server is different. If you are
+   developer of icqlib and can't remeber it, let me know.
+
+o  To compile a CVS version of icqlib on your system, you will need to
+   take several steps to setup the tree for compilation. You can do
+   all these steps at once by running:
+
+   $ make -f Makefile.cvs
+
+   The above command create the "configure" script. Now you can run
+   the configure script to create all the Makefiles.
+
+o  Please submit patches directly to me: denis@null.net. All kinds of
+   contributions are accepted.
+
+Denis V. Dmitrienko <denis@null.net>
+Created:  06 Oct 1999
+Modified: 22 Jul 2000
